@@ -18,6 +18,7 @@ try:
         f = open(filelist)
         f1 = f.read().splitlines()
         for line in f1:
+                print("Processing", line)
                 urllib.request.urlretrieve('http://files.rcsb.org/download/'+line, line)
 finally:
         f.close()
